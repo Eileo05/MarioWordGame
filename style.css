@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 1px solid rgb(35, 160, 35);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#13a0d7, #E0F6FF);
+}
+
+
+
+#txt-gameover {
+    position: fixed;
+    margin-left: 30%;
+    margin-top: 15rem;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+#txt-score {
+    position: fixed;
+    margin-left: 40%;
+    margin-top: 21rem;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    color: green;
+
+
+}
+
+.init {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.style {
+    background-color: rgb(35, 160, 35);
+    color: white;
+    width: 110px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.contador {
+    position: fixed;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario {
+    position: absolute;
+    width: 150px;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.clouds {
+    width: 550px;
+    position: absolute;
+    animation: clouds-animation 20s infinite linear;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@media (max-width:700px) {
+    #txt-gameover {
+
+        margin-top: 50%;
+        font-size: 30px;
+
+    }
+
+    #txt-score {
+        margin-left: 42%;
+        margin-top: 62%;
+        font-size: 20px;
+    }
+
+    .clouds {
+        width: 400px;
+    }
+} 
+
+  
