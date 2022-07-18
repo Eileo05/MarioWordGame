@@ -1,2 +1,2 @@
 # MarioWordGame
-Jogo estático do Mário Word 
+Jogo estático do Mário Word.
